@@ -1,5 +1,6 @@
 import React from 'react';
 import NewPlantForm from './NewPlantForm';
+import PlantList from './PlantList';
 
 class Garden extends React.Component {
 
@@ -21,6 +22,8 @@ class Garden extends React.Component {
     return (
       <div>
         <NewPlantForm storePlant={this.receiveNewPlant}/>
+        <PlantList
+          plantList={this.state.masterPlantList}/>
       </div>
     )
   }
