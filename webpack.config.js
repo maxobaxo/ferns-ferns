@@ -27,7 +27,7 @@ module.exports = {
     hot: true,
     contentBase: resolve(__dirname, 'build'),
     publicPath: '/'
-  }
+  },
 
   module: {
     rules: [

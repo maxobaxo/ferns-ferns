@@ -9,7 +9,7 @@ const render = (Component) => {
     <AppContainer>
       <Component/>
     </AppContainer>,
-    document.getElementById('react-app-root');
+    document.getElementById('react-app-root'),
   );
 };
 
