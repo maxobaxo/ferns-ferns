@@ -10,6 +10,33 @@ class Garden extends React.Component {
       masterPlantList: [],
     }
     this.receiveNewPlant = this.receiveNewPlant.bind(this);
+    this.resetTimeWatered = this.resetTimeWatered.bind(this);
+  }
+
+  componentDidMount() {
+    this.timeSinceWateredChecker = setInterval(() =>
+      this.updatePlantTimeSinceWatered(),
+      5000
+    );
+  }
+
+  componentWillUnMount() {
+    clearInterval(this.timeSinceWateredChecker);
+  }
+
+  resetTimeWatered(plant) {
+    let tempPlantList = this.state.masterPlantList.slice();
+    for (var i = 0; i < tempPlantList.length; i++) {
+      console.log(plant);
+    }
+  }
+
+  updatePlantTimeSinceWatered() {
+    let tempPlantList = this.state.masterPlantList.slice();
+    tempPlantList.forEach((plant) => {
+      plant.setTimeSinceWatered()
+    });
+    this.setState({masterPlantList: tempPlantList});
   }
 
   receiveNewPlant(newPlant) {
@@ -23,7 +50,8 @@ class Garden extends React.Component {
       <div>
         <NewPlantForm storePlant={this.receiveNewPlant}/>
         <PlantList
-          plantList={this.state.masterPlantList}/>
+          plantList={this.state.masterPlantList}
+          waterPlant={this.resetTimeWatered}/>
       </div>
     )
   }

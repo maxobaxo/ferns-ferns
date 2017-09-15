@@ -7,18 +7,22 @@ function PlantList(props) {
   return(
     <div>
       {props.plantList.map((plant, index) =>
-        <Plant
-          name={plant.name}
-          category={plant.category}
-          whenToWater={plant.whenToWater}
-          key={index}/>
+          <Plant
+            name={plant.name}
+            category={plant.category}
+            whenToWater={plant.whenToWater}
+            timeWatered={plant.timeWateredStr}
+            timeSinceWatered={plant.timeSinceWatered}
+            addWater={props.waterPlant}
+            key={index}/>
       )}
     </div>
   );
 }
 
 PlantList.propTypes = {
-  plantList: PropTypes.array.isRequired
+  plantList: PropTypes.array.isRequired,
+  waterPlant: PropTypes.func
 }
 
 export default PlantList;

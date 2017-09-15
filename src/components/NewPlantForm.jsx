@@ -13,7 +13,7 @@ class NewPlantForm extends React.Component {
     event.preventDefault();
     const { _name, _category, _whenToWater } = this.refs;
     var waterSchedule = parseInt(_whenToWater.value);
-    
+
     if (waterSchedule) {
       var newPlant = new Plant(_name.value, _category.value, waterSchedule);
       this.props.storePlant(newPlant);

@@ -6,6 +6,7 @@ class Plant {
     this.category = category;
     this.whenToWater = whenToWater;
     this.timeWatered = new Moment();
+    this.timeWateredStr = this.timeWatered.format('dddd, MMMM Do')
     this.timeSinceWatered = "a few seconds";
   }
 
