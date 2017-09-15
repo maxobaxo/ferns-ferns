@@ -1,9 +1,10 @@
 import React from 'react';
+import NewPlantForm from './NewPlantForm';
 
 function Garden(props) {
   return (
     <div>
-      <p>hello...garden</p>
+      <NewPlantForm/>
     </div>
   )
 }
