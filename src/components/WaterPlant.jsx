@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button } from 'react-bootstrap';
 
 class WaterPlant extends React.Component {
 
@@ -21,7 +22,7 @@ class WaterPlant extends React.Component {
 
     return(
       <div>
-        <button onClick={() => {this.props.plant.resetTimeWatered()}}>Water Me</button>
+        <Button onClick={() => {this.props.plant.resetTimeWatered()}}>Water Me</Button>
       </div>
     )
   }

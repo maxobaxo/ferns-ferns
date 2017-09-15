@@ -4,7 +4,7 @@ import Garden from './Garden';
 
 function App(props) {
   return (
-    <div>
+    <div className='container'>
       <Header/>
       <Garden/>
     </div>

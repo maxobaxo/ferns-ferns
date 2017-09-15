@@ -5,7 +5,7 @@ import WaterPlant from './WaterPlant';
 function Plant(props) {
 
     return(
-      <div>
+      <div className="well">
         <h4>{props.name} ({props.category})</h4>
         <p>Must be watered every {props.whenToWater} day(s)</p>
         <p>This plant was last watered {props.timeSinceWatered} ago [{props.timeWatered}]</p>
