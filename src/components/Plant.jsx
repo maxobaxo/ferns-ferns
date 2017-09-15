@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import WaterPlant from './WaterPlan';
 
-class Plant extends React.Component {
+function Plant(props) {
 
-  constructor(props) {
-    super(props);
-
-  }
-
-  render() {
     return(
       <div>
-        <h4>{this.props.name} ({this.props.category})</h4>
-        <p>Must be watered every {this.props.whenToWater} day(s)</p>
-        <p>This plant was last watered {this.props.timeSinceWatered} ago [{this.props.timeWatered}]</p>
+        <h4>{props.name} ({props.category})</h4>
+        <p>Must be watered every {props.whenToWater} day(s)</p>
+        <p>This plant was last watered {props.timeSinceWatered} ago [{props.timeWatered}]</p>
+        <WaterPlant/>
       </div>
     );
-  }
 }
 
 Plant.propTypes = {
