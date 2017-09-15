@@ -1,8 +1,8 @@
 class Plant {
-  constructor(name, whenToWater, category) {
+  constructor(name, category, whenToWater) {
     this.name = name;
-    this.whenToWater - whenToWater;
     this.category = category;
+    this.whenToWater = whenToWater;
     this.lastWatered = null;
   }
 }
