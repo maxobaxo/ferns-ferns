@@ -3,7 +3,6 @@ class Plant {
     this.name = name;
     this.category = category;
     this.whenToWater = whenToWater;
-    this.lastWatered = 0;
   }
 }
 

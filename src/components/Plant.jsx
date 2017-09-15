@@ -9,7 +9,6 @@ function Plant(props) {
       <p>{props.category}</p>
       <ul>
         <li>Must be watered every {props.whenToWater} day(s)</li>
-        <li>Last watered {props.lastWatered} days ago</li>
       </ul>
     </div>
   );
@@ -19,7 +18,6 @@ Plant.propTypes = {
   name: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   whenToWater: PropTypes.number.isRequired,
-  lastWatered: PropTypes.number.isRequired
 }
 
 export default Plant;
