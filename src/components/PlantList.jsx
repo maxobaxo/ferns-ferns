@@ -13,8 +13,8 @@ function PlantList(props) {
             whenToWater={plant.whenToWater}
             timeWatered={plant.timeWateredStr}
             timeSinceWatered={plant.timeSinceWatered}
-            addWater={props.waterPlant}
-            key={index}/>
+            key={index}
+            plant={plant}/>
       )}
     </div>
   );
@@ -22,7 +22,6 @@ function PlantList(props) {
 
 PlantList.propTypes = {
   plantList: PropTypes.array.isRequired,
-  waterPlant: PropTypes.func
 }
 
 export default PlantList;

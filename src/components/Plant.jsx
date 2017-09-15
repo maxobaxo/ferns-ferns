@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import WaterPlant from './WaterPlan';
+import WaterPlant from './WaterPlant';
 
 function Plant(props) {
 
@@ -9,7 +9,7 @@ function Plant(props) {
         <h4>{props.name} ({props.category})</h4>
         <p>Must be watered every {props.whenToWater} day(s)</p>
         <p>This plant was last watered {props.timeSinceWatered} ago [{props.timeWatered}]</p>
-        <WaterPlant/>
+        <WaterPlant plant={props.plant}/>
       </div>
     );
 }
@@ -20,7 +20,7 @@ Plant.propTypes = {
   whenToWater: PropTypes.number.isRequired,
   timeWatered: PropTypes.string,
   timeSinceWatered: PropTypes.string,
-  addWater: PropTypes.func,
+  plant: PropTypes.object.isRequired
 }
 
 export default Plant;
