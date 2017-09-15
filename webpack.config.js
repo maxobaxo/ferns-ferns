@@ -21,7 +21,7 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
 
-  devtool: '#sourcemap',
+  devtool: '#source-map',
 
   devServer: {
     hot: true,
